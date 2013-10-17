@@ -264,12 +264,11 @@ header {
         image-url('tanner-engraving.jpg') top left no-repeat
     );
     @include background-size('cover');
-    padding: rhythm(6) 0;
+    padding: rhythm(4) 0;
     @include bleed();
 
     @include pad(4,4);
     text-align:center;
-    border-bottom: 10px solid rgba(black, 0.25);
     h1 {
         color: #fff;
     }
@@ -279,7 +278,6 @@ div[role="main"] {
     @include padding-leader(1);
     @include bleed();
     @include pad(4,4);
-    border-top: 10px solid rgba(black, 0.125);
 
     p:first-child {
         &:first-letter {
@@ -287,12 +285,52 @@ div[role="main"] {
             display:block;
             @include adjust-font-size-to(100px);
             color: #999;
-            font-family: "Mr Bedfort", cursive;
-            padding: rhythm(1,100px);
-            background: #eee;
-            margin-right: rhythm(0.5,100px);
-            margin-bottom: rhythm(0.5,100px);
-
+            font-family: "Meddon", cursive;
+            margin-right: rhythm(1, 100px);
         }
     }
+}
+
+.commission-members {
+    list-style:none;
+    margin-left:0;
+    text-align:justify;
+
+    &:after {
+        content: "";
+        display:inline-block;
+        width: 100%;
+    }
+    li {
+        @include adjust-font-size-to(12px);
+        display:inline-block;
+        width: 30%;
+        @include trailer(1, 12px);
+        text-align:left;
+        vertical-align:top;
+        color: #999;
+    }
+
+    .name {
+        display:block;
+        @include adjust-font-size-to(20px);
+        color: $default-color;
+    }
+}
+
+h2 {
+    text-align:center;
+    &:before,
+    &:after {
+        content: " ";
+        color: #ddd;
+        display:block;
+        border-top:1px solid #ddd;
+        width: 1em;
+        margin: rhythm(1) auto;
+    }
+}
+
+h3 {
+    text-align:center;
 }

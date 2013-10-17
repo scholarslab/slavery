@@ -706,7 +706,7 @@ table {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 10.5em 0;
+    padding: 7em 0;
     margin-left: -1em;
     padding-left: 1em;
     margin-right: -1em;
@@ -714,7 +714,6 @@ table {
     padding-left: 22.47191%;
     padding-right: 22.47191%;
     text-align: center;
-    border-bottom: 10px solid rgba(0, 0, 0, 0.25);
   }
   header h1 {
     color: #fff;
@@ -728,7 +727,6 @@ table {
     padding-right: 1em;
     padding-left: 22.47191%;
     padding-right: 22.47191%;
-    border-top: 10px solid rgba(0, 0, 0, 0.125);
   }
   div[role="main"] p:first-child:first-letter {
     float: left;
@@ -736,11 +734,51 @@ table {
     font-size: 6.25em;
     line-height: 1.12em;
     color: #999;
-    font-family: "Mr Bedfort", cursive;
-    padding: 0.28em;
-    background: #eee;
-    margin-right: 0.14em;
-    margin-bottom: 0.14em;
+    font-family: "Meddon", cursive;
+    margin-right: 0.28em;
+  }
+
+  .commission-members {
+    list-style: none;
+    margin-left: 0;
+    text-align: justify;
+  }
+  .commission-members:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+  .commission-members li {
+    font-size: 0.75em;
+    line-height: 2.33333em;
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 2.33333em;
+    text-align: left;
+    vertical-align: top;
+    color: #999;
+  }
+  .commission-members .name {
+    display: block;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    color: #4b4b4b;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  h2:before, h2:after {
+    content: " ";
+    color: #ddd;
+    display: block;
+    border-top: 1px solid #ddd;
+    width: 1em;
+    margin: 1.75em auto;
+  }
+
+  h3 {
+    text-align: center;
   }
 }
 @media print {
