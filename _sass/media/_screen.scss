@@ -1,0 +1,298 @@
+* {
+  @include box-sizing(border-box);
+  margin:0;
+  padding:0;
+}
+
+@include establish-baseline;
+
+body {
+  font-family: $default-font;
+  color: $default-color;
+  @include container;
+}
+
+a {
+  color: $link-color;
+  @include link-colors($link-color, $link-hover-color, $link-active-color,
+  $link-visited-color, $link-focus-color);
+
+  @include transition(color $default-transition-duration, background-color $default-transition-duration);
+
+  &:before {
+    @include single-transition(color);
+  }
+
+  img {
+    @include single-transition(opacity);
+  }
+}
+
+#{headings()} {
+  a {
+    text-decoration:none;
+  }
+}
+
+h1,h2 {
+  font-weight:normal;
+}
+
+h1 {
+  @include adjust-font-size-to(32px);
+  @include adjust-leading-to(2,32px);
+}
+
+h2 {
+  @include adjust-font-size-to(24px);
+  @include leader(2, 24px);
+
+  h1 + &,
+  h1 ~ * &:first-child {
+    @include leader(1, 24px);
+  }
+
+}
+
+h3 {
+  @include adjust-font-size-to(20px);
+  color: $default-color-light;
+  font-weight:normal;
+  @include leader(2, 20px);
+  h2 + & {
+    @include leader(1, 20px);
+  }
+}
+
+h4 {
+  @include adjust-font-size-to($base-font-size);
+  @include leader(2);
+  h3 + & {
+    @include leader(1);
+  }
+}
+
+h5 {
+  @include adjust-font-size-to($base-font-size);
+  color: $default-color-light;
+  @include leader(2);
+  h4 + & {
+    @include leader(1);
+  }
+
+}
+
+h6 {
+  @include adjust-font-size-to($base-font-size);
+  font-style:italic;
+  color: $default-color-light;
+  @include leader(2);
+  h5 + & {
+    @include leader(1);
+  }
+}
+
+#{headings(3,6)} {
+   + p {
+    margin-top:0;
+  }
+}
+
+p {
+  margin: rhythm(1) 0;
+}
+
+blockquote {
+  margin:0;
+  @include adjust-font-size-to(20px);
+  border-left: rhythm(0.25, 20px) solid $default-color-lightest;
+  padding-left: rhythm(1, 20px);
+  font-style:italic;
+
+  figure & {
+    text-align:left;
+  }
+
+  & + figcaption {
+    margin-left: rhythm(1.25, 14px);
+    text-align:left;
+  }
+
+  & :last-child {
+    margin-bottom:0;
+  }
+}
+
+figure {
+  margin: rhythm(2) 0;
+  text-align:center;
+
+  img {
+    border: 1px solid $default-color-lightest;
+    padding: rhythm(0.25);
+    background: #fff;
+    @include box-shadow(0 0 5px rgba(black, 0.1));
+  }
+}
+
+figcaption {
+  @include adjust-font-size-to(14px);
+  @include leader(1, 14px);
+  @include adjust-leading-to(1, 14px);
+  color: $default-color-light;
+}
+
+dl {
+  margin: rhythm(1) 0;
+
+  dt {
+    font-weight:bold;
+  }
+  dd {
+    margin: 0 0 rhythm(1) rhythm(1);
+  }
+}
+
+ul {
+  list-style:disc;
+}
+
+ol {
+  list-style:decimal;
+}
+
+ul,ol {
+  padding:0;
+  margin: rhythm(1) 0 rhythm(1) rhythm(1);
+
+  nav & {
+    margin-left:0;
+  }
+
+  ul {
+    list-style: circle;
+  }
+
+  ol {
+    list-style: upper-alpha;
+  }
+
+  ul, ol {
+    margin: 0 0 0 rhythm(1);
+
+    ul {
+      list-style:square;
+    }
+
+    ol {
+      list-style:lower-alpha;
+    }
+  }
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+th,
+td {
+  padding: rhythm(1) rhythm(0.5) 0;
+  @include trailing-border(1px);
+  border-color: rgba($default-color,.2);
+}
+
+th {
+  @include trailing-border(3px);
+  text-align:left;
+}
+
+img {
+  max-width:100%;
+  width:auto;
+  height:auto;
+}
+
+code {
+  font-family: monospace;
+  color: $code-color;
+}
+
+del {
+  color: $default-color-lighter;
+}
+
+ins {
+  text-decoration:none;
+  background: $ins-color;
+}
+
+address {
+  font-style:normal;
+  margin: rhythm(1) 0;
+}
+
+br {
+  margin:0;
+  line-height:0;
+}
+
+hr {
+  border:none;
+  text-align:center;
+  &:before {
+    display:block;
+    content: " · · · · · ";
+    color: rgba($default-color-light, 0.5);
+  }
+}
+
+.kicker {
+  margin:0;
+  @include adjust-font-size-to(14px);
+  @include adjust-leading-to(1, 14px);
+  font-style:italic;
+  color: $default-color-light;
+
+  & + * {
+    margin-top:0 !important;
+  }
+}
+
+header {
+    @include background(
+        image-url('tanner-engraving.jpg') top left no-repeat
+    );
+    @include background-size('cover');
+    padding: rhythm(6) 0;
+    @include bleed();
+
+    @include pad(4,4);
+    text-align:center;
+    border-bottom: 10px solid rgba(black, 0.25);
+    h1 {
+        color: #fff;
+    }
+}
+
+div[role="main"] {
+    @include padding-leader(1);
+    @include bleed();
+    @include pad(4,4);
+    border-top: 10px solid rgba(black, 0.125);
+
+    p:first-child {
+        &:first-letter {
+            float:left;
+            display:block;
+            @include adjust-font-size-to(100px);
+            color: #999;
+            font-family: "Mr Bedfort", cursive;
+            padding: rhythm(1,100px);
+            background: #eee;
+            margin-right: rhythm(0.5,100px);
+            margin-bottom: rhythm(0.5,100px);
+
+        }
+    }
+}
