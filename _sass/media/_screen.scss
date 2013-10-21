@@ -52,6 +52,17 @@ h1 {
 h2 {
   @include adjust-font-size-to(24px);
   @include leader(2, 24px);
+  text-align:center;
+
+  &:before,
+  &:after {
+    content: " ";
+    color: #ddd;
+    display:block;
+    border-top:1px solid #ddd;
+    width: 1em;
+    margin: rhythm(1) auto;
+  }
 
   h1 + &,
   h1 ~ * &:first-child {
@@ -65,6 +76,8 @@ h3 {
   color: $default-color-light;
   font-weight:normal;
   @include leader(2, 20px);
+  text-align:center;
+
   h2 + & {
     @include leader(1, 20px);
   }
@@ -301,14 +314,6 @@ div[role="main"] {
     @include padding-leader(2);
     @include bleed();
 
-    @include at-breakpoint(8) {
-        @include pad(1,1);
-    }
-
-    @include at-breakpoint(16) {
-        @include pad(4,4);
-    }
-
     p:first-child {
         &:first-letter {
             float:left;
@@ -352,19 +357,30 @@ div[role="main"] {
     }
 }
 
-h2 {
+footer[role=contentinfo] {
+    border-top: 1px solid #eee;
+    @include bleed();
     text-align:center;
-    &:before,
-    &:after {
-        content: " ";
-        color: #ddd;
-        display:block;
-        border-top:1px solid #ddd;
-        width: 1em;
-        margin: rhythm(1) auto;
+    p {
+        @include adjust-font-size-to(14px);
+        font-style:italic;
+        color: #999;
     }
 }
 
-h3 {
-    text-align:center;
+@include at-breakpoint(8) {
+
+    div[role=main],
+    footer[role=contentinfo] {
+        @include pad(1,1);
+    }
 }
+
+@include at-breakpoint(16) {
+
+    div[role=main],
+    footer[role=contentinfo] {
+        @include pad(4,4);
+    }
+}
+

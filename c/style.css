@@ -496,6 +496,15 @@ table {
     font-size: 1.5em;
     line-height: 1.16667em;
     margin-top: 2.33333em;
+    text-align: center;
+  }
+  h2:before, h2:after {
+    content: " ";
+    color: #ddd;
+    display: block;
+    border-top: 1px solid #ddd;
+    width: 1em;
+    margin: 1.75em auto;
   }
   h1 + h2, h1 ~ * h2:first-child {
     margin-top: 1.16667em;
@@ -507,6 +516,7 @@ table {
     color: rgba(75, 75, 75, 0.75);
     font-weight: normal;
     margin-top: 2.8em;
+    text-align: center;
   }
   h2 + h3 {
     margin-top: 1.4em;
@@ -807,30 +817,31 @@ table {
     font-style: normal;
   }
 
-  h2 {
+  footer[role=contentinfo] {
+    border-top: 1px solid #eee;
+    margin-left: -1em;
+    padding-left: 1em;
+    margin-right: -1em;
+    padding-right: 1em;
     text-align: center;
   }
-  h2:before, h2:after {
-    content: " ";
-    color: #ddd;
-    display: block;
-    border-top: 1px solid #ddd;
-    width: 1em;
-    margin: 1.75em auto;
-  }
-
-  h3 {
-    text-align: center;
+  footer[role=contentinfo] p {
+    font-size: 0.875em;
+    line-height: 2em;
+    font-style: italic;
+    color: #999;
   }
 }
 @media screen and (min-width: 546px) {
-  div[role="main"] {
+  div[role=main],
+  footer[role=contentinfo] {
     padding-left: 12.82051%;
     padding-right: 12.82051%;
   }
 }
 @media screen and (min-width: 1106px) {
-  div[role="main"] {
+  div[role=main],
+  footer[role=contentinfo] {
     padding-left: 25.31646%;
     padding-right: 25.31646%;
   }
