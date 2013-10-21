@@ -821,7 +821,7 @@ table {
     line-height: 2.33333em;
     line-height: 1.75em;
     display: inline-block;
-    width: 30%;
+    width: 48%;
     margin-bottom: 2.33333em;
     text-align: left;
     vertical-align: top;
@@ -850,6 +850,11 @@ table {
     line-height: 2em;
     font-style: italic;
     color: #999;
+  }
+}
+@media screen and (min-width: 546px) {
+  .commission-members li {
+    width: 30%;
   }
 }
 @media screen and (min-width: 546px) {

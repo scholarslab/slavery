@@ -355,12 +355,16 @@ div[role="main"] {
         @include adjust-font-size-to(12px);
         @include adjust-leading-to(0.75,12px);
         display:inline-block;
-        width: 30%;
+        width: 48%;
         @include trailer(1, 12px);
         text-align:left;
         vertical-align:top;
         color: #999;
         font-style:italic;
+
+        @include at-breakpoint(8) {
+            width: 30%;
+        }
     }
 
     .name {
