@@ -427,7 +427,7 @@ table {
   }
 
   html {
-    background: url('../i/blizzard.png?1339701544');
+    background: url('../i/ricepaper2.png?1339701544');
   }
 
   body {
@@ -824,7 +824,7 @@ table {
   }
 
   footer[role=contentinfo] {
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-left: -1em;
     padding-left: 1em;
     margin-right: -1em;
