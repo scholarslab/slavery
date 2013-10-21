@@ -285,7 +285,7 @@ header {
     );
     background-repeat:no-repeat;
     @include background-size('cover');
-    padding: rhythm(1) 0 rhythm(3);
+    padding: rhythm(2) 0 rhythm(2);
     @include bleed();
     text-align:center;
     border-top:20px solid rgba(black, 0.9);
