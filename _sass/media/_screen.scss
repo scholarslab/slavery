@@ -261,23 +261,43 @@ hr {
 
 header {
     @include background(
-        image-url('tanner-engraving.jpg') top left no-repeat
+        radial-gradient(transparent, rgba(black, 0.5) 50%),
+        image-url('tanner-engraving.jpg')
     );
+    background-repeat:no-repeat;
     @include background-size('cover');
     padding: rhythm(4) 0;
     @include bleed();
 
     @include pad(4,4);
     text-align:center;
-    h1 {
-        color: #fff;
+
+    #rotunda {
+        width: 100px;
+        height: 100px;
+        display:block;
+        margin: rhythm(1) auto;
+        background: rgba(black, 0.5);
+        @include border-radius(50px);
+        padding: 25px;
+    }
+
+    h1 a {
+        @include link-colors(white, white, white,white,white);
     }
 }
 
 div[role="main"] {
     @include padding-leader(1);
     @include bleed();
-    @include pad(4,4);
+
+    @include at-breakpoint(8) {
+        @include pad(1,1);
+    }
+
+    @include at-breakpoint(16) {
+        @include pad(4,4);
+    }
 
     p:first-child {
         &:first-letter {
