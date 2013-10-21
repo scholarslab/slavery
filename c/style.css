@@ -730,28 +730,34 @@ table {
     padding-left: 1em;
     margin-right: -1em;
     padding-right: 1em;
-    padding-left: 22.47191%;
-    padding-right: 22.47191%;
     text-align: center;
     border-top: 20px solid rgba(0, 0, 0, 0.9);
   }
   header #rotunda {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: block;
-    margin: 1.75em auto;
+    margin: 0 auto 1.75em;
     background: rgba(0, 0, 0, 0.5);
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-    border-radius: 40px;
-    padding: 20px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    padding: 15px;
   }
   header h1 {
+    font-size: 1.25em;
+    line-height: 1.4em;
+    margin-top: 4.2em;
+    font-style: italic;
+  }
+  header h1 strong {
+    font-weight: normal;
+    display: block;
     font-size: 2.5em;
     line-height: 1.4em;
-    margin-top: 1.4em;
+    font-style: normal;
   }
   header h1 a {
     color: white;

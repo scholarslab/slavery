@@ -287,23 +287,30 @@ header {
     @include background-size('cover');
     padding: rhythm(1) 0 rhythm(3);
     @include bleed();
-    @include pad(4,4);
     text-align:center;
     border-top:20px solid rgba(black, 0.9);
 
     #rotunda {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
         display:block;
-        margin: rhythm(1) auto;
+        margin: 0 auto rhythm(1);
         background: rgba(black, 0.5);
-        @include border-radius(40px);
-        padding: 20px;
+        @include border-radius(30px);
+        padding: 15px;
     }
 
     h1 {
-        @include adjust-font-size-to(40px);
-        margin-top:rhythm(2, 40px);
+        @include adjust-font-size-to(20px);
+        @include leader(3, 20px);
+        font-style:italic;
+        strong {
+            font-weight:normal;
+            display:block;
+            @include adjust-font-size-to(40px);
+            font-style:normal;
+        }
+
         a {
             @include link-colors(white, white, white,white,white);
         }
