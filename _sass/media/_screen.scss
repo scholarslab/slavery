@@ -304,8 +304,14 @@ header {
     }
 
     h1 {
-        @include adjust-font-size-to(24px);
-        @include leader(3, 24px);
+        @include adjust-font-size-to(18px);
+        @include leader(2, 18px);
+
+        @include at-breakpoint(8) {
+            @include adjust-font-size-to(24px);
+            @include leader(3, 24px);
+        }
+
         font-style:italic;
         strong {
             font-weight:normal;
@@ -321,7 +327,6 @@ header {
 }
 
 div[role="main"] {
-    @include padding-leader(2);
     @include bleed();
     @include background(
         linear-gradient(rgba(black, 0.2), transparent)
@@ -329,14 +334,19 @@ div[role="main"] {
     border-top: 1px solid rgba(white, 0.25);
     @include background-size('100% 100px');
     background-repeat: repeat-x;
-    p:first-child {
-        &:first-letter {
-            float:left;
-            display:block;
-            @include adjust-font-size-to(100px);
-            color: #999;
-            font-family: "Meddon", cursive;
-            margin-right: rhythm(1, 100px);
+
+    @include at-breakpoint(8) {
+        @include padding-leader(2);
+
+        p:first-child {
+            &:first-letter {
+                float:left;
+                display:block;
+                @include adjust-font-size-to(100px);
+                color: #999;
+                font-family: "Meddon", cursive;
+                margin-right: rhythm(1, 100px);
+            }
         }
     }
 }

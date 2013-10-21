@@ -750,9 +750,9 @@ table {
     margin-top: -1px;
   }
   header h1 {
-    font-size: 1.5em;
-    line-height: 1.16667em;
-    margin-top: 3.5em;
+    font-size: 1.125em;
+    line-height: 1.55556em;
+    margin-top: 3.11111em;
     font-style: italic;
   }
   header h1 strong {
@@ -779,7 +779,6 @@ table {
   }
 
   div[role="main"] {
-    padding-top: 3.5em;
     margin-left: -1em;
     padding-left: 1em;
     margin-right: -1em;
@@ -796,16 +795,6 @@ table {
     background-size: 100% 100px;
     background-repeat: repeat-x;
   }
-  div[role="main"] p:first-child:first-letter {
-    float: left;
-    display: block;
-    font-size: 6.25em;
-    line-height: 1.12em;
-    color: #999;
-    font-family: "Meddon", cursive;
-    margin-right: 0.28em;
-  }
-
   .commission-members {
     list-style: none;
     margin-left: 0;
@@ -852,6 +841,28 @@ table {
     color: #999;
   }
 }
+@media screen and (min-width: 546px) {
+  header h1 {
+    font-size: 1.5em;
+    line-height: 1.16667em;
+    margin-top: 3.5em;
+  }
+}
+@media screen and (min-width: 546px) {
+  div[role="main"] {
+    padding-top: 3.5em;
+  }
+  div[role="main"] p:first-child:first-letter {
+    float: left;
+    display: block;
+    font-size: 6.25em;
+    line-height: 1.12em;
+    color: #999;
+    font-family: "Meddon", cursive;
+    margin-right: 0.28em;
+  }
+}
+
 @media screen and (min-width: 546px) {
   .commission-members li {
     width: 30%;
