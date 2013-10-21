@@ -715,11 +715,11 @@ table {
   }
 
   header {
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 50, color-stop(0%, transparent), color-stop(50%, rgba(0, 0, 0, 0.5))), url('../i/tanner-engraving.jpg?1382034527');
-    background: -webkit-radial-gradient(transparent, rgba(0, 0, 0, 0.5) 50%), url('../i/tanner-engraving.jpg?1382034527');
-    background: -moz-radial-gradient(transparent, rgba(0, 0, 0, 0.5) 50%), url('../i/tanner-engraving.jpg?1382034527');
-    background: -o-radial-gradient(transparent, rgba(0, 0, 0, 0.5) 50%), url('../i/tanner-engraving.jpg?1382034527');
-    background: radial-gradient(transparent, rgba(0, 0, 0, 0.5) 50%), url('../i/tanner-engraving.jpg?1382034527');
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 50, color-stop(0%, transparent), color-stop(50%, rgba(0, 0, 0, 0.55))), url('../i/tanner-engraving.jpg?1382034527');
+    background: -webkit-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
+    background: -moz-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
+    background: -o-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
+    background: radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -734,17 +734,20 @@ table {
     border-top: 20px solid rgba(0, 0, 0, 0.9);
   }
   header #rotunda {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     display: block;
-    margin: 0 auto 1.75em;
+    margin: 0 auto 0.875em;
     background: rgba(0, 0, 0, 0.5);
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
-    border-radius: 30px;
-    padding: 15px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+    border-radius: 25px;
+    padding: 12px;
+  }
+  header #rotunda img {
+    margin-top: -1px;
   }
   header h1 {
     font-size: 1.5em;

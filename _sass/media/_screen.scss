@@ -280,7 +280,7 @@ hr {
 
 header {
     @include background(
-        radial-gradient(transparent, rgba(black, 0.5) 50%),
+        radial-gradient(transparent, rgba(black, 0.55) 50%),
         image-url('tanner-engraving.jpg')
     );
     background-repeat:no-repeat;
@@ -291,13 +291,16 @@ header {
     border-top:20px solid rgba(black, 0.9);
 
     #rotunda {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         display:block;
-        margin: 0 auto rhythm(1);
+        margin: 0 auto rhythm(0.5);
         background: rgba(black, 0.5);
-        @include border-radius(30px);
-        padding: 15px;
+        @include border-radius(25px);
+        padding: 12px;
+        img {
+            margin-top: -1px;
+        }
     }
 
     h1 {
