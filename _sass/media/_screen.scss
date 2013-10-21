@@ -6,6 +6,12 @@
 
 @include establish-baseline;
 
+html {
+    @include background(
+        image-url('blizzard.png')
+    );
+}
+
 body {
   font-family: $default-font;
   color: $default-color;
@@ -266,29 +272,33 @@ header {
     );
     background-repeat:no-repeat;
     @include background-size('cover');
-    padding: rhythm(4) 0;
+    padding: rhythm(1) 0 rhythm(3);
     @include bleed();
-
     @include pad(4,4);
     text-align:center;
+    border-top:20px solid rgba(black, 0.9);
 
     #rotunda {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         display:block;
         margin: rhythm(1) auto;
         background: rgba(black, 0.5);
-        @include border-radius(50px);
-        padding: 25px;
+        @include border-radius(40px);
+        padding: 20px;
     }
 
-    h1 a {
-        @include link-colors(white, white, white,white,white);
+    h1 {
+        @include adjust-font-size-to(40px);
+        margin-top:rhythm(2, 40px);
+        a {
+            @include link-colors(white, white, white,white,white);
+        }
     }
 }
 
 div[role="main"] {
-    @include padding-leader(1);
+    @include padding-leader(2);
     @include bleed();
 
     @include at-breakpoint(8) {
@@ -323,18 +333,22 @@ div[role="main"] {
     }
     li {
         @include adjust-font-size-to(12px);
+        @include adjust-leading-to(0.75,12px);
         display:inline-block;
         width: 30%;
         @include trailer(1, 12px);
         text-align:left;
         vertical-align:top;
         color: #999;
+        font-style:italic;
     }
 
     .name {
         display:block;
         @include adjust-font-size-to(20px);
+        @include adjust-leading-to(1,20px);
         color: $default-color;
+        font-style:normal;
     }
 }
 

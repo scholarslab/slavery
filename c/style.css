@@ -426,6 +426,10 @@ table {
     line-height: 1.75em;
   }
 
+  html {
+    background: url('../i/blizzard.png?1339701544');
+  }
+
   body {
     font-family: "Libre Baskerville", serif;
     color: #4b4b4b;
@@ -711,7 +715,7 @@ table {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    padding: 7em 0;
+    padding: 1.75em 0 5.25em;
     margin-left: -1em;
     padding-left: 1em;
     margin-right: -1em;
@@ -719,19 +723,25 @@ table {
     padding-left: 22.47191%;
     padding-right: 22.47191%;
     text-align: center;
+    border-top: 20px solid rgba(0, 0, 0, 0.9);
   }
   header #rotunda {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     display: block;
     margin: 1.75em auto;
     background: rgba(0, 0, 0, 0.5);
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
-    border-radius: 50px;
-    padding: 25px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    border-radius: 40px;
+    padding: 20px;
+  }
+  header h1 {
+    font-size: 2.5em;
+    line-height: 1.4em;
+    margin-top: 1.4em;
   }
   header h1 a {
     color: white;
@@ -750,7 +760,7 @@ table {
   }
 
   div[role="main"] {
-    padding-top: 1.75em;
+    padding-top: 3.5em;
     margin-left: -1em;
     padding-left: 1em;
     margin-right: -1em;
@@ -779,18 +789,22 @@ table {
   .commission-members li {
     font-size: 0.75em;
     line-height: 2.33333em;
+    line-height: 1.75em;
     display: inline-block;
     width: 30%;
     margin-bottom: 2.33333em;
     text-align: left;
     vertical-align: top;
     color: #999;
+    font-style: italic;
   }
   .commission-members .name {
     display: block;
     font-size: 1.25em;
     line-height: 1.4em;
+    line-height: 1.4em;
     color: #4b4b4b;
+    font-style: normal;
   }
 
   h2 {
