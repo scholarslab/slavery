@@ -747,16 +747,16 @@ table {
     padding: 15px;
   }
   header h1 {
-    font-size: 1.25em;
-    line-height: 1.4em;
-    margin-top: 4.2em;
+    font-size: 1.5em;
+    line-height: 1.16667em;
+    margin-top: 3.5em;
     font-style: italic;
   }
   header h1 strong {
     font-weight: normal;
     display: block;
-    font-size: 2.5em;
-    line-height: 1.4em;
+    font-size: 1.875em;
+    line-height: 1.86667em;
     font-style: normal;
   }
   header h1 a {

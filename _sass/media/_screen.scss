@@ -301,13 +301,13 @@ header {
     }
 
     h1 {
-        @include adjust-font-size-to(20px);
-        @include leader(3, 20px);
+        @include adjust-font-size-to(24px);
+        @include leader(3, 24px);
         font-style:italic;
         strong {
             font-weight:normal;
             display:block;
-            @include adjust-font-size-to(40px);
+            @include adjust-font-size-to(30px);
             font-style:normal;
         }
 
