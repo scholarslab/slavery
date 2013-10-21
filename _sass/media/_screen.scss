@@ -320,7 +320,12 @@ header {
 div[role="main"] {
     @include padding-leader(2);
     @include bleed();
-
+    @include background(
+        linear-gradient(rgba(black, 0.2), transparent)
+        );
+    border-top: 1px solid rgba(white, 0.25);
+    @include background-size('100% 100px');
+    background-repeat: repeat-x;
     p:first-child {
         &:first-letter {
             float:left;

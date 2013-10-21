@@ -781,6 +781,17 @@ table {
     padding-left: 1em;
     margin-right: -1em;
     padding-right: 1em;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.2)), color-stop(100%, transparent));
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+    background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+    background: -o-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    -webkit-background-size: 100% 100px;
+    -moz-background-size: 100% 100px;
+    -o-background-size: 100% 100px;
+    background-size: 100% 100px;
+    background-repeat: repeat-x;
   }
   div[role="main"] p:first-child:first-letter {
     float: left;
