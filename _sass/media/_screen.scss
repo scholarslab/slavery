@@ -388,12 +388,38 @@ div[role="main"] {
 
 footer[role=contentinfo] {
     border-top: 1px solid rgba(black,0.1);
+    padding: rhythm(1) 0;
     @include bleed();
     text-align:center;
     p {
-        @include adjust-font-size-to(14px);
-        font-style:italic;
-        color: #999;
+        @include adjust-font-size-to(12px);
+        @include adjust-leading-to(1,12px);
+        margin: 0;
+        color: #777;
+    }
+}
+
+#slab-logo-link {
+    display:block;
+    margin: rhythm(1) 0 0;
+    &:link,
+    &:visited {
+        img {
+            opacity: 0.5;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        img {
+            opacity: 0.6;
+        }
+    }
+
+    &:active {
+        img {
+            opacity: 0.7;
+        }
     }
 }
 

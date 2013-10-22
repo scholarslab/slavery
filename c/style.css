@@ -828,6 +828,7 @@ table {
 
   footer[role=contentinfo] {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 1.75em 0;
     margin-left: -1em;
     padding-left: 1em;
     margin-right: -1em;
@@ -835,10 +836,25 @@ table {
     text-align: center;
   }
   footer[role=contentinfo] p {
-    font-size: 0.875em;
-    line-height: 2em;
-    font-style: italic;
-    color: #999;
+    font-size: 0.75em;
+    line-height: 2.33333em;
+    line-height: 2.33333em;
+    margin: 0;
+    color: #777;
+  }
+
+  #slab-logo-link {
+    display: block;
+    margin: 1.75em 0 0;
+  }
+  #slab-logo-link:link img, #slab-logo-link:visited img {
+    opacity: 0.5;
+  }
+  #slab-logo-link:hover img, #slab-logo-link:focus img {
+    opacity: 0.6;
+  }
+  #slab-logo-link:active img {
+    opacity: 0.7;
   }
 }
 @media screen and (min-width: 546px) {
