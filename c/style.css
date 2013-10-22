@@ -795,6 +795,15 @@ table {
     background-size: 100% 100px;
     background-repeat: repeat-x;
   }
+  div[role="main"] p:first-child:first-letter {
+    float: left;
+    display: block;
+    font-size: 4.375em;
+    line-height: 1.2em;
+    color: #999;
+    font-family: "Meddon", cursive;
+    margin-right: 0.4em;
+  }
   .commission-members {
     list-style: none;
     margin-left: 0;
@@ -869,12 +878,8 @@ table {
     padding-top: 3.5em;
   }
   div[role="main"] p:first-child:first-letter {
-    float: left;
-    display: block;
     font-size: 6.25em;
     line-height: 1.12em;
-    color: #999;
-    font-family: "Meddon", cursive;
     margin-right: 0.28em;
   }
 }

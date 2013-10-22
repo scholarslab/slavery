@@ -334,17 +334,22 @@ div[role="main"] {
     border-top: 1px solid rgba(white, 0.25);
     @include background-size('100% 100px');
     background-repeat: repeat-x;
+    p:first-child {
+        &:first-letter {
+            float:left;
+            display:block;
+            @include adjust-font-size-to(70px);
+            color: #999;
+            font-family: "Meddon", cursive;
+            margin-right: rhythm(1, 70px);
+        }
+    }
 
     @include at-breakpoint(8) {
         @include padding-leader(2);
-
         p:first-child {
             &:first-letter {
-                float:left;
-                display:block;
                 @include adjust-font-size-to(100px);
-                color: #999;
-                font-family: "Meddon", cursive;
                 margin-right: rhythm(1, 100px);
             }
         }
