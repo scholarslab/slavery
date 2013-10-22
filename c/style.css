@@ -446,24 +446,24 @@ table {
   }
 
   a {
-    color: #327dc8;
-    color: #327dc8;
+    color: #f07800;
+    color: #f07800;
     -webkit-transition: color 0.5s, background-color 0.5s;
     -moz-transition: color 0.5s, background-color 0.5s;
     -o-transition: color 0.5s, background-color 0.5s;
     transition: color 0.5s, background-color 0.5s;
   }
   a:visited {
-    color: #5896d5;
+    color: #ff9224;
   }
   a:focus {
-    color: #32c8c8;
+    color: #7800f0;
   }
   a:hover {
-    color: #32c8c8;
+    color: #7800f0;
   }
   a:active {
-    color: #327dc8;
+    color: #f07800;
   }
   a:before {
     -webkit-transition: color 0.5s;
@@ -670,7 +670,7 @@ table {
 
   code {
     font-family: monospace;
-    color: #c87d32;
+    color: #0000f0;
   }
 
   del {
@@ -679,7 +679,7 @@ table {
 
   ins {
     text-decoration: none;
-    background: #c87d32;
+    background: #0000f0;
   }
 
   address {

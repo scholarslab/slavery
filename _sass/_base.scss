@@ -52,7 +52,7 @@ $container-style: fluid;
   @return $color;
 }
 
-$base-color                     : rgb(50,200,200);
+$base-color                     : rgb(240,120,0);
 $complementary-color: color-wheel($base-color, 'complementary');
 $analogous-positive: color-wheel($base-color, 'analogous');
 $complementary-analogous-positive: color-wheel($analogous-positive, 'complementary');
@@ -68,9 +68,9 @@ $default-color-light            : rgba($default-color, 0.75);
 $default-color-lighter          : rgba($default-color, 0.5);
 $default-color-lightest         : rgba($default-color, 0.1);
 
-$link-color                     : $analogous-positive;
+$link-color                     : $base-color;
 $link-visited-color             : lighten($link-color, 10%);
-$link-hover-color               : $base-color;
+$link-hover-color               : $triad-negative;
 $link-focus-color               : $link-hover-color;
 $link-active-color              : $link-color;
 
