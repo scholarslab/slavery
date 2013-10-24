@@ -399,14 +399,14 @@ footer[role=contentinfo] {
     p {
         @include adjust-font-size-to(12px);
         @include adjust-leading-to(1,12px);
-        margin: 0;
+        margin: 0 0 rhythm(1);
         color: #777;
     }
 }
 
-#slab-logo-link {
-    display:block;
-    margin: rhythm(1) 0 0;
+#slab-logo-link,
+#uva-logo-link {
+    margin: 0 rhythm(0.5);
     &:link,
     &:visited {
         img {

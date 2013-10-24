@@ -848,21 +848,26 @@ table {
     font-size: 0.75em;
     line-height: 2.33333em;
     line-height: 2.33333em;
-    margin: 0;
+    margin: 0 0 1.75em;
     color: #777;
   }
 
-  #slab-logo-link {
-    display: block;
-    margin: 1.75em 0 0;
+  #slab-logo-link,
+  #uva-logo-link {
+    margin: 0 0.875em;
   }
-  #slab-logo-link:link img, #slab-logo-link:visited img {
+  #slab-logo-link:link img, #slab-logo-link:visited img,
+  #uva-logo-link:link img,
+  #uva-logo-link:visited img {
     opacity: 0.4;
   }
-  #slab-logo-link:hover img, #slab-logo-link:focus img {
+  #slab-logo-link:hover img, #slab-logo-link:focus img,
+  #uva-logo-link:hover img,
+  #uva-logo-link:focus img {
     opacity: 0.5;
   }
-  #slab-logo-link:active img {
+  #slab-logo-link:active img,
+  #uva-logo-link:active img {
     opacity: 0.6;
   }
 }
