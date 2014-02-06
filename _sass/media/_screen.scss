@@ -8,7 +8,7 @@
 
 html {
     @include background(
-        image-url('ricepaper2.png')
+        image-url('ricepaper2.png') fixed
     );
 }
 
@@ -47,22 +47,15 @@ h1,h2 {
 h1 {
   @include adjust-font-size-to(32px);
   @include adjust-leading-to(2,32px);
+  text-align:center;
 }
 
 h2 {
   @include adjust-font-size-to(24px);
   @include leader(2, 24px);
   text-align:center;
-
-  &:before,
-  &:after {
-    content: " ";
-    color: #ddd;
-    display:block;
-    border-top:1px solid #ddd;
-    width: 1em;
-    margin: rhythm(1) auto;
-  }
+  color: $default-color-lighter;
+  font-style:italic;
 
   h1 + &,
   h1 ~ * &:first-child {
@@ -272,13 +265,13 @@ hr {
   @include adjust-leading-to(1, 14px);
   font-style:italic;
   color: $default-color-light;
-
+  text-align:center;
   & + * {
     margin-top:0 !important;
   }
 }
 
-header {
+header[role=banner] {
     @include background(
         radial-gradient(transparent, rgba(black, 0.55) 50%),
         image-url('tanner-engraving.jpg')
@@ -324,6 +317,39 @@ header {
             @include link-colors(white, white, white,white,white);
         }
     }
+
+    nav {
+        text-align:center;
+        ul {
+            @include adjust-font-size-to(16px);
+            margin:0;
+            @include leader(1, 16px);
+        }
+        li {
+            display:inline-block;
+        }
+        a {
+            color: white;
+            color: rgba(white, 0.9);
+            text-decoration:none;
+            padding: rhythm(0.5);
+            &:link,
+            &:visited {
+                background: #333;
+                background: rgba(black, 0.5);
+                border: 1px solid #303030;
+
+            }
+
+            &:focus,
+            &:hover {
+                background: #222;
+                background: rgba(black, 0.75);
+                border: 1px solid #494949;
+            }
+
+        }
+    }
 }
 
 div[role="main"] {
@@ -334,7 +360,13 @@ div[role="main"] {
     border-top: 1px solid rgba(white, 0.25);
     @include background-size('100% 100px');
     background-repeat: repeat-x;
-    p:first-child {
+    @include padding-leader(1);
+
+    @include at-breakpoint(8) {
+        @include padding-leader(2);
+    }
+
+    p:not(.kicker):first-child {
         &:first-letter {
             float:left;
             display:block;
@@ -342,17 +374,60 @@ div[role="main"] {
             color: #999;
             font-family: "Meddon", cursive;
             margin-right: rhythm(1, 70px);
-        }
-    }
-
-    @include at-breakpoint(8) {
-        @include padding-leader(2);
-        p:first-child {
-            &:first-letter {
+            
+            @include at-breakpoint(8) {
                 @include adjust-font-size-to(100px);
                 margin-right: rhythm(1, 100px);
             }
         }
+    }
+
+}
+
+#posts {
+    list-style:none;
+    overflow-x: hidden;
+    li {
+        &:after {
+            float: left;
+            width: 0;
+            white-space: nowrap;
+            content:
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . "
+         ". . . . . . . . . . . . . . . . . . . . ";
+         color: $default-color-lighter;
+        }
+
+        :first-child {
+            padding-right: 0.25em;
+            @include background(
+                image-url('ricepaper2.png') fixed
+            );
+        }
+
+        :last-child {
+            display:block;
+            float: right;
+            padding-left: 0.25em;
+            position: relative;
+            z-index: 1;
+            text-align:right;
+            @include background(
+                image-url('ricepaper2.png') fixed
+            );
+
+        }
+    }
+
+    a {
+        font-weight:bold;
+    }
+
+    time {
+        font-style:italic;
+        color: $default-color-light;
     }
 }
 
@@ -388,6 +463,24 @@ div[role="main"] {
         @include adjust-leading-to(1,20px);
         color: $default-color;
         font-style:normal;
+    }
+}
+
+#homelink {
+    text-align:center;
+
+  &:before {
+    content: " ";
+    color: #ddd;
+    display:block;
+    border-top:1px solid #ddd;
+    width: 1em;
+    margin: rhythm(1) auto;
+  }
+
+    a {
+        text-decoration:none;
+        font-style:italic;
     }
 }
 

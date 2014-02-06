@@ -427,7 +427,7 @@ table {
   }
 
   html {
-    background: url('../i/ricepaper2.png?1339701544');
+    background: url('../i/ricepaper2.png?1391616031') fixed;
   }
 
   body {
@@ -490,6 +490,7 @@ table {
     font-size: 2em;
     line-height: 1.75em;
     line-height: 1.75em;
+    text-align: center;
   }
 
   h2 {
@@ -497,14 +498,8 @@ table {
     line-height: 1.16667em;
     margin-top: 2.33333em;
     text-align: center;
-  }
-  h2:before, h2:after {
-    content: " ";
-    color: #ddd;
-    display: block;
-    border-top: 1px solid #ddd;
-    width: 1em;
-    margin: 1.75em auto;
+    color: rgba(75, 75, 75, 0.5);
+    font-style: italic;
   }
   h1 + h2, h1 ~ * h2:first-child {
     margin-top: 1.16667em;
@@ -709,17 +704,18 @@ table {
     line-height: 2em;
     font-style: italic;
     color: rgba(75, 75, 75, 0.75);
+    text-align: center;
   }
   .kicker + * {
     margin-top: 0 !important;
   }
 
-  header {
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 50, color-stop(0%, transparent), color-stop(50%, rgba(0, 0, 0, 0.55))), url('../i/tanner-engraving.jpg?1382034527');
-    background: -webkit-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
-    background: -moz-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
-    background: -o-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
-    background: radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1382034527');
+  header[role=banner] {
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 50, color-stop(0%, transparent), color-stop(50%, rgba(0, 0, 0, 0.55))), url('../i/tanner-engraving.jpg?1391616031');
+    background: -webkit-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1391616031');
+    background: -moz-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1391616031');
+    background: -o-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1391616031');
+    background: radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%), url('../i/tanner-engraving.jpg?1391616031');
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -733,7 +729,7 @@ table {
     text-align: center;
     border-top: 20px solid rgba(0, 0, 0, 0.9);
   }
-  header #rotunda {
+  header[role=banner] #rotunda {
     width: 50px;
     height: 50px;
     display: block;
@@ -746,36 +742,64 @@ table {
     border-radius: 25px;
     padding: 12px;
   }
-  header #rotunda img {
+  header[role=banner] #rotunda img {
     margin-top: -1px;
   }
-  header h1 {
+  header[role=banner] h1 {
     font-size: 1.125em;
     line-height: 1.55556em;
     margin-top: 3.11111em;
     font-style: italic;
   }
-  header h1 strong {
+  header[role=banner] h1 strong {
     font-weight: normal;
     display: block;
     font-size: 1.875em;
     line-height: 1.86667em;
     font-style: normal;
   }
-  header h1 a {
+  header[role=banner] h1 a {
     color: white;
   }
-  header h1 a:visited {
+  header[role=banner] h1 a:visited {
     color: white;
   }
-  header h1 a:focus {
+  header[role=banner] h1 a:focus {
     color: white;
   }
-  header h1 a:hover {
+  header[role=banner] h1 a:hover {
     color: white;
   }
-  header h1 a:active {
+  header[role=banner] h1 a:active {
     color: white;
+  }
+  header[role=banner] nav {
+    text-align: center;
+  }
+  header[role=banner] nav ul {
+    font-size: 1em;
+    line-height: 1.75em;
+    margin: 0;
+    margin-top: 1.75em;
+  }
+  header[role=banner] nav li {
+    display: inline-block;
+  }
+  header[role=banner] nav a {
+    color: white;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    padding: 0.875em;
+  }
+  header[role=banner] nav a:link, header[role=banner] nav a:visited {
+    background: #333;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #303030;
+  }
+  header[role=banner] nav a:focus, header[role=banner] nav a:hover {
+    background: #222;
+    background: rgba(0, 0, 0, 0.75);
+    border: 1px solid #494949;
   }
 
   div[role="main"] {
@@ -794,8 +818,9 @@ table {
     -o-background-size: 100% 100px;
     background-size: 100% 100px;
     background-repeat: repeat-x;
+    padding-top: 1.75em;
   }
-  div[role="main"] p:first-child:first-letter {
+  div[role="main"] p:not(.kicker):first-child:first-letter {
     float: left;
     display: block;
     font-size: 4.375em;
@@ -804,6 +829,38 @@ table {
     font-family: "Meddon", cursive;
     margin-right: 0.4em;
   }
+  #posts {
+    list-style: none;
+    overflow-x: hidden;
+  }
+  #posts li:after {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content: ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . " ". . . . . . . . . . . . . . . . . . . . ";
+    color: rgba(75, 75, 75, 0.5);
+  }
+  #posts li :first-child {
+    padding-right: 0.25em;
+    background: url('../i/ricepaper2.png?1391616031') fixed;
+  }
+  #posts li :last-child {
+    display: block;
+    float: right;
+    padding-left: 0.25em;
+    position: relative;
+    z-index: 1;
+    text-align: right;
+    background: url('../i/ricepaper2.png?1391616031') fixed;
+  }
+  #posts a {
+    font-weight: bold;
+  }
+  #posts time {
+    font-style: italic;
+    color: rgba(75, 75, 75, 0.75);
+  }
+
   .commission-members {
     list-style: none;
     margin-left: 0;
@@ -833,6 +890,22 @@ table {
     line-height: 1.4em;
     color: #4b4b4b;
     font-style: normal;
+  }
+
+  #homelink {
+    text-align: center;
+  }
+  #homelink:before {
+    content: " ";
+    color: #ddd;
+    display: block;
+    border-top: 1px solid #ddd;
+    width: 1em;
+    margin: 1.75em auto;
+  }
+  #homelink a {
+    text-decoration: none;
+    font-style: italic;
   }
 
   footer[role=contentinfo] {
@@ -872,7 +945,7 @@ table {
   }
 }
 @media screen and (min-width: 546px) {
-  header h1 {
+  header[role=banner] h1 {
     font-size: 1.5em;
     line-height: 1.16667em;
     margin-top: 3.5em;
@@ -882,7 +955,9 @@ table {
   div[role="main"] {
     padding-top: 3.5em;
   }
-  div[role="main"] p:first-child:first-letter {
+}
+@media screen and (min-width: 546px) {
+  div[role="main"] p:not(.kicker):first-child:first-letter {
     font-size: 6.25em;
     line-height: 1.12em;
     margin-right: 0.28em;
