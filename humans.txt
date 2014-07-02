@@ -12,6 +12,7 @@
 
     HTML5, CSS3
     Normalize.css, Respond, Modernizr
+    Jekyll, Sass, Compass, Susy
 
 
 
