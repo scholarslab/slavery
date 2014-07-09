@@ -1,5 +1,6 @@
 ---
 title: Visit to Monticello
+layout: post
 ---
 
 On June 25, 2014, President’s Commission on Slavery and the University co-Chairs Dr. Marcus Martin and history professor Kirt von Daacke visited Thomas Jefferson’s Monticello. Joining them on the trip were commission members Tierney Fairchild, Meghan Faulkner, Patrice Grimes, and Tamika Richeson. As well, Local Advisory Board members Doreen Feldman, Phoebe Haupt, and Dorenda “Rennie” Johnson attended.
