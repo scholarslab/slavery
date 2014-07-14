@@ -53,7 +53,6 @@ h1 {
 h2 {
   @include adjust-font-size-to(24px);
   @include leader(2, 24px);
-  text-align:center;
   color: $default-color-lighter;
   font-style:italic;
 
@@ -65,14 +64,15 @@ h2 {
 }
 
 h3 {
-  @include adjust-font-size-to(20px);
+  @include adjust-font-size-to($base-font-size);
+  @include adjust-leading-to(1, $base-font-size);
   color: $default-color-light;
-  font-weight:normal;
-  @include leader(2, 20px);
-  text-align:center;
+  font-weight:bold;
+  @include leader(2);
+  @include trailer(1);
 
   h2 + & {
-    @include leader(1, 20px);
+    @include leader(1);
   }
 }
 
@@ -205,6 +205,12 @@ ul,ol {
 table {
   border-collapse:collapse;
   border-spacing:0;
+  @include adjust-font-size-to(14px);
+  @include adjust-leading-to(.75,14px);
+  br {
+      @include trailer(1);
+  }
+
 }
 
 th,
@@ -212,6 +218,7 @@ td {
   padding: rhythm(1) rhythm(0.5) 0;
   @include trailing-border(1px);
   border-color: rgba($default-color,.2);
+  vertical-align:top;
 }
 
 th {
@@ -374,7 +381,7 @@ div[role="main"] {
             color: #999;
             font-family: "Meddon", cursive;
             margin-right: rhythm(1, 70px);
-            
+
             @include at-breakpoint(8) {
                 @include adjust-font-size-to(100px);
                 margin-right: rhythm(1, 100px);
