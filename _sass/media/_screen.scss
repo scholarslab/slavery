@@ -279,6 +279,8 @@ hr {
 }
 
 header[role=banner] {
+    $svg-gradient-shim-threshold: 1 !global;
+
     background-color: #333;
     @include background(
         image-url('tanner-engraving.jpg') top left no-repeat
