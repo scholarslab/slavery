@@ -717,8 +717,9 @@ table {
   }
 
   header[role=banner] {
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#99000000", EndColorStr="#99000000");
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#99000000", EndColorStr="#99000000");
+    *zoom: 1;
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#80000000', endColorstr='#80000000');
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#80000000', endColorstr='#80000000');
     background: url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.5)), color-stop(100%, rgba(0, 0, 0, 0.25))) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25)) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;

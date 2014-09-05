@@ -279,8 +279,7 @@ hr {
 }
 
 header[role=banner] {
-    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#99000000", EndColorStr="#99000000");
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#99000000", EndColorStr="#99000000");
+    @include ie-filter-gradient(rgba(black,.5), rgba(black,.5));
     @include background(
         image-url('tanner-engraving.jpg') top left no-repeat
         );
