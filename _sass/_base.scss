@@ -14,6 +14,7 @@ $grid-background-baseline-color: rgba(0,80,150,0.2); // Background color for Com
 $grid-background-column-color: rgba(0,80,150,0.05); // Background color for grid columns
 $grid-background-baseline-height: $base-line-height;
 $default-transition-duration: .5s;
+$svg-gradient-shim-threshold: 0.1; // For IE9 SVG gradient support, supposedly - http://compass-style.org/reference/compass/css3/images/
 
 // Susy
 $total-columns: 18;

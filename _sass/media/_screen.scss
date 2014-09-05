@@ -280,10 +280,9 @@ hr {
 
 header[role=banner] {
     @include background(
-        radial-gradient(transparent, rgba(black, 0.55) 50%),
-        image-url('tanner-engraving.jpg')
+        radial-gradient(transparent, rgba(black, 0.55) 50%) top left no-repeat,
+        image-url('tanner-engraving.jpg') top left no-repeat
     );
-    background-repeat:no-repeat;
     @include background-size('cover');
     padding: rhythm(2) 0 rhythm(2);
     @include bleed();
