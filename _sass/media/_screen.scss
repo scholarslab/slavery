@@ -281,11 +281,7 @@ hr {
 header[role=banner] {
     background-color: #333;
     @include background(
-        image-url('tanner-engraving.jpg') top left no-repeat
-    );
-
-    @include background(
-        radial-gradient(transparent, rgba(black, 0.55) 50%) top left no-repeat,
+        linear-gradient(top, rgba(black, .75), rgba(black, .25)) top left no-repeat,
         image-url('tanner-engraving.jpg') top left no-repeat
     );
     @include background-size('cover');

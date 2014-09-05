@@ -718,12 +718,11 @@ table {
 
   header[role=banner] {
     background-color: #333;
-    background: url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 50, color-stop(0%, transparent), color-stop(50%, rgba(0, 0, 0, 0.55))) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
-    background: -webkit-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
-    background: -moz-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
-    background: -o-radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
-    background: radial-gradient(transparent, rgba(0, 0, 0, 0.55) 50%) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.75)), color-stop(100%, rgba(0, 0, 0, 0.25))) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
+    background: linear-gradient(top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.25)) top left no-repeat, url('../i/tanner-engraving.jpg?1401723544') top left no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
