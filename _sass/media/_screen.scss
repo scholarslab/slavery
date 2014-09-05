@@ -279,11 +279,17 @@ hr {
 }
 
 header[role=banner] {
-    background-color: #333;
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#99000000", EndColorStr="#99000000");
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr="#99000000", EndColorStr="#99000000");
     @include background(
-        linear-gradient(top, rgba(black, .75), rgba(black, .25)) top left no-repeat,
+        image-url('tanner-engraving.jpg') top left no-repeat
+        );
+
+    @include background(
+        linear-gradient(top, rgba(black, .5), rgba(black, .25)) top left no-repeat,
         image-url('tanner-engraving.jpg') top left no-repeat
     );
+
     @include background-size('cover');
     padding: rhythm(2) 0 rhythm(2);
     @include bleed();
