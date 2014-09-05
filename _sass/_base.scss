@@ -1,3 +1,4 @@
+
 // Development
 $development: false;
 
@@ -9,7 +10,7 @@ $grid-background-column-color: rgba(0,80,150,0.05); // Background color for grid
 $grid-background-baseline-height: $base-line-height;
 $default-transition-duration: .5s;
 
-$svg-gradient-shim-threshold: 1 !default;
+$svg-gradient-shim-threshold: 0.1 !default;
 
 // Susy
 $total-columns: 18;
@@ -80,10 +81,3 @@ $sans-serif: "Noto Sans", sans-serif;
 $default-font: $serif;
 $alt-font: $sans-serif;
 $heading-font: $alt-font;
-
-// Imports
-@import "compass";
-@import "susy";
-@import "mixins";
-@import "normalize";
-
