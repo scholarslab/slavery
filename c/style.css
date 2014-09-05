@@ -433,8 +433,8 @@ table {
     font-family: "Libre Baskerville", serif;
     color: #4b4b4b;
     *zoom: 1;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 14px;
+    padding-right: 14px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -729,10 +729,10 @@ table {
     -o-background-size: cover;
     background-size: cover;
     padding: 3.5em 0 3.5em;
-    margin-left: -1em;
-    padding-left: 1em;
-    margin-right: -1em;
-    padding-right: 1em;
+    margin-left: -14px;
+    padding-left: 14px;
+    margin-right: -14px;
+    padding-right: 14px;
     text-align: center;
     border-top: 20px solid rgba(0, 0, 0, 0.9);
   }
@@ -810,10 +810,10 @@ table {
   }
 
   div[role="main"] {
-    margin-left: -1em;
-    padding-left: 1em;
-    margin-right: -1em;
-    padding-right: 1em;
+    margin-left: -14px;
+    padding-left: 14px;
+    margin-right: -14px;
+    padding-right: 14px;
     background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(0, 0, 0, 0.2)), color-stop(100%, transparent));
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
     background: -moz-linear-gradient(rgba(0, 0, 0, 0.2), transparent);
@@ -918,10 +918,10 @@ table {
   footer[role=contentinfo] {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1.75em 0;
-    margin-left: -1em;
-    padding-left: 1em;
-    margin-right: -1em;
-    padding-right: 1em;
+    margin-left: -14px;
+    padding-left: 14px;
+    margin-right: -14px;
+    padding-right: 14px;
     text-align: center;
   }
   footer[role=contentinfo] p {
