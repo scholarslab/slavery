@@ -14,7 +14,7 @@
         <script src="/j/respond.min.js"></script>
         <link type="text/plain" rel="author" href="humans.txt" />
     </head>
-    <body>
+    <body id="{{ page.title | downcase | replace: " ", "-" | remove: "?" | remove: "." | remove: "!" | remove: ":" | remove: ";" }}" class="{{ page.bodyclass }}">
         <header role="banner">
             <a id="uva-link" href="/">
                 <span id="rotunda"><img src="/i/rotunda-white.png" alt="Rotunda
