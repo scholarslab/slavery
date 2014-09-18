@@ -378,22 +378,6 @@ div[role="main"] {
         @include padding-leader(2);
     }
 
-    p:not(.kicker):first-child {
-        &:first-letter {
-            float:left;
-            display:block;
-            @include adjust-font-size-to(70px);
-            color: #999;
-            font-family: "Meddon", cursive;
-            margin-right: rhythm(1, 70px);
-
-            @include at-breakpoint(8) {
-                @include adjust-font-size-to(100px);
-                margin-right: rhythm(1, 100px);
-            }
-        }
-    }
-
 }
 
 #posts {
