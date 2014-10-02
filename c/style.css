@@ -669,6 +669,10 @@ table {
     height: auto;
   }
 
+  em cite {
+    font-style: normal;
+  }
+
   code {
     font-family: monospace;
     color: #0014f0;
