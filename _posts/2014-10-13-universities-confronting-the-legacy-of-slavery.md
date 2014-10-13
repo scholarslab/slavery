@@ -32,9 +32,11 @@ Justice), Scot A. French of the University of Central Florida (formerly
 of UVA’s Carter G. Woodson Institute for African-American and African
 Studies), Leslie M. Harris of Emory University (co-founder and of
 Emory’s Transforming Community Project), Terry L. Meyers of The College
-of William and Mary (Co-Director of the Lemon Project), and Joshua D.
+of William and Mary (Co-Director of the Lemon Project), Joshua D.
 Rothman of the University of Alabama (Director of the Frances S.
-Summersell Center for the Study of the South).
+Summersell Center for the Study of the South), and Craig Wilder of the
+Massachusetts Institute of Technology (author of *Ebony and Ivy: Race,
+Slavery, and the Troubled History of America’s Universities*).
 
 Alfred L. Brophy, Judge John J. Parker Distinguished Professor of Law at
 the University of North Carolina-Chapel Hill, will deliver the keynote
