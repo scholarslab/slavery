@@ -692,6 +692,14 @@ table {
     margin: 1.75em 0;
   }
 
+  iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 560px;
+    margin-bottom: 1.75em;
+  }
+
   br {
     margin: 0;
     line-height: 0;

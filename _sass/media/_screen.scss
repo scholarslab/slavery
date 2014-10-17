@@ -255,6 +255,14 @@ address {
   margin: rhythm(1) 0;
 }
 
+iframe {
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    width: 560px;
+    margin-bottom: rhythm(1);
+}
+
 br {
   margin:0;
   line-height:0;
