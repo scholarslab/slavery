@@ -352,6 +352,7 @@ header[role=banner] {
             @include adjust-font-size-to(16px);
             margin:0;
             @include leader(1, 16px);
+            @include adjust-leading-to(2,16px);
         }
         li {
             display:inline-block;
