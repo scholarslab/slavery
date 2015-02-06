@@ -699,6 +699,9 @@ table {
     width: 560px;
     margin-bottom: 1.75em;
   }
+  iframe#unearthed-and-understood {
+    width: 680px;
+  }
 
   br {
     margin: 0;
