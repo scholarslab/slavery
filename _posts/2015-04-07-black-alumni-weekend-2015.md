@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Slavery and the University of Virginia" Black Alumni Weekend
+title: “Slavery and the University of Virginia” Black Alumni Weekend
 ---
 
 Presented by the President’s Commission on Slavery and the University and the U.Va. IDEA Fund
