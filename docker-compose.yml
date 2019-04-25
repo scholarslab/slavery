@@ -1,0 +1,47 @@
+version: '3.1'
+
+services:
+    slavery_db:
+        image: mysql:5.7
+        container_name: slavery_db
+        restart: always
+        volumes:
+            #- ./slavery_db_data:/var/lib/mysql
+            # Only use this line for the initial start up (the very first time docker-compose is run
+            # With this line uncommented, the database will be overwritten using the .sql file
+            - ./initial_sql/slavery_production.sql:/docker-entrypoint-initdb.d/slavery_production.sql
+        environment:
+            MYSQL_DATABASE: ${DB_NAME}
+            MYSQL_USER: ${DB_USER}
+            MYSQL_PASSWORD: ${DB_PASS}
+            MYSQL_RANDOM_ROOT_PASSWORD: '1'
+        labels:
+            - "traefik.enable=false"
+
+    slavery_wp:
+        image: wordpress
+        container_name: slavery_wp
+        depends_on:
+            - slavery_db
+        restart: always
+        volumes:
+            - ./wp-content:/var/www/html/wp-content/
+        environment:
+            WORDPRESS_DB_HOST: slavery_db
+            WORDPRESS_DB_USER: ${DB_USER}
+            WORDPRESS_DB_PASSWORD: ${DB_PASS}
+            WORDPRESS_DB_NAME: ${DB_NAME}
+        expose:
+            - "80"
+        labels:
+            - "traefik.enable=true"
+            - "traefik.docker.network=thenetwork"
+            - "traefik.port=80"
+            - "traefik.backend=slavery_wp"
+            - "traefik.frontend.rule=Host:slavery.virginia.edu"
+
+networks:
+    default:
+        external:
+            name: thenetwork
+

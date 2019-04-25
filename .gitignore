@@ -1,1 +1,4 @@
 _site
+wp-content
+initial_sql
+.env
