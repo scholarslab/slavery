@@ -50,3 +50,10 @@ Then run docker-compose:
 or 
 
 - `docker-compose up -d` to run in the background
+
+# Notes:
+- Added the DB_CHARSET value to the docker-compose, which adds that setting
+  into the wp-config.php file. Set this explicitly to 'latin1' because of
+  issues with encoding from the old MySQL database to the 'new'. The web page
+  was rendering some characters incorrectly, but explicitly setting this value
+  fixes those issues. 
